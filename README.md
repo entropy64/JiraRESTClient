@@ -1,4 +1,4 @@
-# ConfluenceRESTClient
+# JiraRESTClient
 
 A Java client for interacting with the JIRA REST API.
 
