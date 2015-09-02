@@ -9,10 +9,8 @@ import retrofit.http.Path;
  *
  * @author Jonathon Hope
  * @see <a href="https://docs.atlassian.com/jira/REST/latest/">JIRA REST API DOCS</a>
- * @since 19/06/2015
  */
-public interface JiraAPI
-{
+public interface JiraAPI {
 
     /**
      * GET an Issue by Id or Key. Returns a full representation of the issue for the
@@ -23,7 +21,7 @@ public interface JiraAPI
      * @see <a href="https://docs.atlassian.com/jira/REST/latest/#api/2/issue-getIssue">
      * Get Issue Documentation</a>
      */
-    @GET( "/rest/api/2/issue/{id}" )
-    Issue getIssueById( @Path( "id" ) String id );
+    @GET("/rest/api/2/issue/{id}")
+    Issue getIssueById(@Path("id") String id);
 
 }

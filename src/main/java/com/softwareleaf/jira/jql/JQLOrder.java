@@ -1,20 +1,19 @@
 package com.softwareleaf.jira.jql;
 
 /**
+ * Provides an API for handling {@literal "ORDER BY"} JQL Keyword
+ * grammar rules.
+ *
  * @author Jonathon Hope
- * @since 19/06/2015
  */
-public class JQLOrder
-{
+public class JQLOrder {
 
     /**
      * This enum provides the types of JQL ordering.
      *
      * @author Jonathon Hope
-     * @since 19/06/2015
      */
-    public enum OrderType
-    {
+    public enum OrderType {
         /**
          * Ascending.
          */
@@ -26,27 +25,23 @@ public class JQLOrder
 
     }
 
-    private JQL myJql;
+    private JQL jql;
 
-    public JQLOrder( JQL jql )
-    {
-        this.myJql = jql;
+    public JQLOrder(JQL jql) {
+        this.jql = jql;
     }
 
-    private JQLKeyword addOrderType( String field )
-    {
-        myJql.add( field );
-        return new JQLKeyword( myJql );
+    private JQLKeyword addOrderType(String field) {
+        jql.add(field);
+        return new JQLKeyword(jql);
     }
 
-    public JQLKeyword asc()
-    {
-        return addOrderType( " " + OrderType.ASC );
+    public JQLKeyword asc() {
+        return addOrderType(" " + OrderType.ASC);
     }
 
-    public JQLKeyword desc()
-    {
-        return addOrderType( " " + OrderType.DESC );
+    public JQLKeyword desc() {
+        return addOrderType(" " + OrderType.DESC);
     }
 
 }

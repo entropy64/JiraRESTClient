@@ -2,14 +2,12 @@ package com.softwareleaf.jira.model;
 
 /**
  * Represents the fields object that a JSON Issue response contains.
- * <p>
+ * <p/>
  * Note: At this point, we only care about two fields of the fields available.
  *
  * @author Jonathon Hope
- * @since 19/06/2015
  */
-public class Fields
-{
+public class Fields {
 
     /**
      * The project that the parent issue belongs to.
@@ -23,29 +21,23 @@ public class Fields
     /**
      * Constructor.
      */
-    public Fields()
-    {
+    public Fields() {
     }
 
-    // getters and setters.
-
-    public FixVersion[] getFixVersions()
-    {
+    public FixVersion[] getFixVersions() {
         return fixVersions;
     }
 
-    public void setFixVersions( FixVersion[] fixVersions )
-    {
+    public void setFixVersions(FixVersion[] fixVersions) {
         this.fixVersions = fixVersions;
     }
 
-    public Project getProject()
-    {
+    public Project getProject() {
         return project;
     }
 
-    public void setProject( Project project )
-    {
+    public void setProject(Project project) {
         this.project = project;
     }
+
 }

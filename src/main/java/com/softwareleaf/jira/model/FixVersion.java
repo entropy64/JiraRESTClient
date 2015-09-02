@@ -13,10 +13,8 @@ package com.softwareleaf.jira.model;
  * }</pre>
  *
  * @author Jonathon Hope
- * @since 19/06/2015
  */
-public class FixVersion
-{
+public class FixVersion {
 
     /**
      * The identifier of this FixVersion.
@@ -34,39 +32,30 @@ public class FixVersion
     /**
      * Default Constructor.
      */
-    public FixVersion()
-    {
+    public FixVersion() {
     }
 
-    // getters and setters
-
-    public String getId()
-    {
+    public String getId() {
         return id;
     }
 
-    public void setId( String id )
-    {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public void setName( String name )
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getSelf()
-    {
+    public String getSelf() {
         return self;
     }
 
-    public void setSelf( String self )
-    {
+    public void setSelf(String self) {
         this.self = self;
     }
 }

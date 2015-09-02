@@ -11,13 +11,12 @@ import java.util.List;
  * @author Jonathon Hope
  * @since 19/06/2015
  */
-public class StringUtility
-{
+public class StringUtility {
 
     /**
      * Formats a date given as a string in a stringobject
      * allowed dates are
-     * <p>
+     * <p/>
      * "yyyy/MM/dd HH:mm"
      * "yyyy-MM-dd HH:mm"
      * "yyyy/MM/dd"
@@ -26,43 +25,30 @@ public class StringUtility
      * @param date to convert
      * @return date object
      */
-    public static Date stringToDate( String date ) throws ParseException
-    {
+    public static Date stringToDate(String date) throws ParseException {
         String pattern;
-        if ( date.contains( "/" ) && date.contains( ":" ) )
-        {
+        if (date.contains("/") && date.contains(":")) {
             pattern = "yyyy/MM/dd HH:mm";
-        }
-        else if ( date.contains( "/" ) && !date.contains( ":" ) )
-        {
+        } else if (date.contains("/") && !date.contains(":")) {
             pattern = "yyyy/MM/dd";
-        }
-        else if ( date.contains( "-" ) && date.contains( ":" ) )
-        {
+        } else if (date.contains("-") && date.contains(":")) {
             pattern = "yyyy-MM-dd HH:mm";
-        }
-        else if ( date.contains( "-" ) && !date.contains( ":" ) )
-        {
+        } else if (date.contains("-") && !date.contains(":")) {
             pattern = "yyyy-MM-dd";
-        }
-        else
-        {
+        } else {
             pattern = "dd.mm.yyyy";
         }
 
-        return new SimpleDateFormat( pattern ).parse( date );
+        return new SimpleDateFormat(pattern).parse(date);
     }
 
-    public static String dateToString( Date aDate )
-    {
-        return new SimpleDateFormat( "yyyy/MM/dd HH:mm" ).format( aDate );
+    public static String dateToString(Date aDate) {
+        return new SimpleDateFormat("yyyy/MM/dd HH:mm").format(aDate);
     }
 
-    public static void verifyParams( int minLength, Object... values )
-    {
-        if ( values.length < minLength )
-        {
-            throw new IllegalArgumentException( "Need at least " + minLength + " values" );
+    public static void verifyParams(int minLength, Object... values) {
+        if (values.length < minLength) {
+            throw new IllegalArgumentException("Need at least " + minLength + " values");
         }
     }
 
@@ -72,41 +58,24 @@ public class StringUtility
      * @param value object to convert
      * @return String value of object
      */
-    public static String stringify( Object value )
-    {
-        if ( value == null )
-        {
+    public static String stringify(Object value) {
+        if (value == null) {
             return "";
-        }
-        else if ( value instanceof Boolean )
-        {
+        } else if (value instanceof Boolean) {
             boolean b = (Boolean) value;
-            return ( b ) ? "true" : "false";
-        }
-        else
-        {
-            if ( value instanceof Integer )
-            {
+            return (b) ? "true" : "false";
+        } else {
+            if (value instanceof Integer) {
                 return "" + value;
-            }
-            else if ( value instanceof Double )
-            {
+            } else if (value instanceof Double) {
                 return "" + value;
-            }
-            else if ( value instanceof Long )
-            {
+            } else if (value instanceof Long) {
                 return "" + value;
-            }
-            else if ( value instanceof Float )
-            {
+            } else if (value instanceof Float) {
                 return "" + value;
-            }
-            else if ( value instanceof Enum )
-            {
+            } else if (value instanceof Enum) {
                 return value.toString().toLowerCase();
-            }
-            else
-            {
+            } else {
                 return value.toString();
             }
         }
@@ -118,18 +87,13 @@ public class StringUtility
      * @param values array of objects
      * @return comma separated list
      */
-    public static String commaSeparatedList( Object... values )
-    {
+    public static String commaSeparatedList(Object... values) {
         String toAdd = "";
-        for ( int i = 0; i < values.length; i++ )
-        {
-            if ( i == values.length - 1 )
-            {
-                toAdd += stringify( values[i] );
-            }
-            else
-            {
-                toAdd += stringify( values[i] ) + ", ";
+        for (int i = 0; i < values.length; i++) {
+            if (i == values.length - 1) {
+                toAdd += stringify(values[i]);
+            } else {
+                toAdd += stringify(values[i]) + ", ";
             }
         }
         return toAdd;
@@ -141,9 +105,8 @@ public class StringUtility
      * @param values list of objects
      * @return comma separated list
      */
-    public static String commaSeparatedList( List<Object> values )
-    {
-        return commaSeparatedList( values.toArray( new Object[values.size()] ) );
+    public static String commaSeparatedList(List<Object> values) {
+        return commaSeparatedList(values.toArray(new Object[values.size()]));
     }
 
     /**
@@ -152,18 +115,13 @@ public class StringUtility
      * @param values array of objects
      * @return list of separated items
      */
-    public static String whiteSpaceSeparatedList( Object... values )
-    {
+    public static String whiteSpaceSeparatedList(Object... values) {
         String toAdd = "";
-        for ( int i = 0; i < values.length; i++ )
-        {
-            if ( i == values.length - 1 )
-            {
-                toAdd += stringify( values[i] );
-            }
-            else
-            {
-                toAdd += stringify( values[i] ) + " ";
+        for (int i = 0; i < values.length; i++) {
+            if (i == values.length - 1) {
+                toAdd += stringify(values[i]);
+            } else {
+                toAdd += stringify(values[i]) + " ";
             }
         }
         return toAdd;
@@ -175,9 +133,8 @@ public class StringUtility
      * @param values list of objects
      * @return list of separated items
      */
-    public static String whiteSpaceSeparatedList( List<Object> values )
-    {
-        return whiteSpaceSeparatedList( values.toArray( new Object[values.size()] ) );
+    public static String whiteSpaceSeparatedList(List<Object> values) {
+        return whiteSpaceSeparatedList(values.toArray(new Object[values.size()]));
     }
 
 }
