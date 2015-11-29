@@ -20,4 +20,4 @@ Issue issue = client.getIssue("FYP-100");
 
 ### Disclaimer
 
-This library is currently still under active development, a MAVEN repository will be published when complete.
+This library is currently still under active development, a MAVEN artifact will be published when complete.
