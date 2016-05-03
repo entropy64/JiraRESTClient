@@ -8,12 +8,12 @@ import java.util.Objects;
  * <p/>
  * <pre>{@literal
  *       "project": {
- *              "self": "http://qvjira101/rest/api/2/project/10190",
+ *              "self": "http://unknown",
  *              "id": "10190",
- *              "key": "SP",
- *              "name": "Service Portal",
+ *              "key": "Unknown",
+ *              "name": "Unknown",
  *              "avatarUrls": {
- *                  "48x48": "http://qvjira101/secure/projectavatar?pid=10190&avatarId=12010",
+ *                  "48x48": "http://unknown",
  *                  ...
  *              }
  *       },
