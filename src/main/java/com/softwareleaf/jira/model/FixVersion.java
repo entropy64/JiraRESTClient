@@ -3,9 +3,9 @@ package com.softwareleaf.jira.model;
 /**
  * <pre>{@literal
  *     "fixVersions": [{
- *          "self":"http://qvjira101/rest/api/2/version/15648",
+ *          "self":"http://Unknown",
  *          "id":"15648",
- *          "name":"SP 2015.R.1",
+ *          "name":"Unknown",
  *          "archived":false,
  *          "released":true,
  *          "releaseDate":"2015-03-15"
